@@ -11,9 +11,6 @@
  */
 
 
-
-
-
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -23,6 +20,8 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
+
+
 $use-grids:         true;
 $use-flexbox:       false;
 $use-columns:       false;
