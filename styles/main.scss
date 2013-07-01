@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/**
+ * main.scss
+ *
+ * Never add styles directly to this file - set up imports
+ */
+ 
+ 
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+ 
+/* Setup inuit.css
+   ========================================================================== */
+ 
+@import "modules/vars";
+@import "../bower-components/inuit.css/css/inuit.css/inuit";
+ 
+ 
+/* Compass
+   ========================================================================== */
+ 
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
+ 
+ 
+/* Modules
+   ========================================================================== */
+ 
+@import "modules/mixins";
+ 
+ 
+/* Partials
+   ========================================================================== */
+ 
+// Base css
+@import "partials/typography";
+ 
+// Page structure
+@import "partials/scaffolding";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/nav";
+ 
+// Misc
+@import "partials/ie"; // IE specific css
+@import "partials/shame"; // Stylesheet reserved for temporary hacky code
+ 
+ 
+/* Vendor css
+   ========================================================================== */
+ 
+@import "vendor/jquery.ui.core";

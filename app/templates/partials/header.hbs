@@ -1,0 +1,17 @@
+<p>header header header header header header header header header header header header header header header header header header header header header header header header header header header header header header header header </p>
+
+<h1>{{title}}</h1>
+
+<nav class="nav-wrapper" role="navigation">
+    <ul class="nav nav--stacked">
+        <li{{#is title "Home"}} class="active"{{/is}}><a href="index.html" title="Home">Home</a></li>
+        <li{{#is title "My Page"}} class="active"{{/is}}><a href="mypage.html" title="My Page">My Page</a>
+            {{#is title "My Page"}}
+            <ul class="sub-nav">
+                <li><a href="linkone.html" title="Link One">Link One</a></li>
+                <li><a href="linktwo.html" title="Link Two">Link Two</a></li>
+            </ul>
+            {{/is}}
+        </li>
+    </ul>
+</nav>
