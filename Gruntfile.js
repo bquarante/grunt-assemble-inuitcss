@@ -27,8 +27,8 @@ module.exports = function (grunt) {
         watch: {
             options: {
                 // Start a live reload server on the default port 35729
-                livereload: true,
-              },
+                livereload: true
+            },
             coffee: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
                 tasks: ['coffee:dist']
@@ -362,7 +362,6 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
-            
             'connect:livereload',
             'open',
             'watch'
