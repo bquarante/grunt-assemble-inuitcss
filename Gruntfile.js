@@ -25,6 +25,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
+            options: {
+                // Start a live reload server on the default port 35729
+                livereload: true,
+              },
             coffee: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
                 tasks: ['coffee:dist']
@@ -34,7 +38,7 @@ module.exports = function (grunt) {
                 tasks: ['coffee:test']
             },
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                files: ['styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             },
             livereload: {
@@ -147,7 +151,7 @@ module.exports = function (grunt) {
         },
         compass: {
             options: {
-                sassDir: '<%= yeoman.app %>/styles',
+                sassDir: 'styles',
                 cssDir: '.tmp/styles',
                 generatedImagesDir: '.tmp/images/generated',
                 imagesDir: '<%= yeoman.app %>/images',
@@ -268,14 +272,14 @@ module.exports = function (grunt) {
             //
             //     <!-- build:css({.tmp,app}) styles/main.css -->
             //
-            // dist: {
-            //     files: {
-            //         '<%= yeoman.dist %>/styles/main.css': [
-            //             '.tmp/styles/{,*/}*.css',
-            //             '<%= yeoman.app %>/styles/{,*/}*.css'
-            //         ]
-            //     }
-            // }
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/styles/main.css': [
+                        '.tmp/styles/{,*/}*.css',
+                        '<%= yeoman.app %>/styles/{,*/}*.css'
+                    ]
+                }
+            }
         },
         htmlmin: {
             dist: {
@@ -349,7 +353,7 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('assemble');
-    grunt.loadNpmTasks('grunt-grunticon');
+    //grunt.loadNpmTasks('grunt-grunticon');
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
@@ -358,6 +362,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
+            
             'connect:livereload',
             'open',
             'watch'
@@ -374,7 +379,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'assemble',
-        'grunticon',
+        //'grunticon',
         'useminPrepare',
         'concurrent:dist',
         'requirejs',

@@ -14,40 +14,41 @@
    ========================================================================== */
  
 @import "modules/vars";
-@import "../bower-components/inuit.css/css/inuit.css/inuit";
+@import "partials/base";
+@import "../bower_components/inuit.css/css/inuit.css/inuit";
  
  
-/* Compass
-   ========================================================================== */
+// /* Compass
+//    ========================================================================== */
  
-@import "compass/css3/transition";
-@import "compass/css3/opacity";
- 
- 
-/* Modules
-   ========================================================================== */
- 
-@import "modules/mixins";
+// @import "compass/css3/transition";
+// @import "compass/css3/opacity";
  
  
-/* Partials
-   ========================================================================== */
+// /* Modules
+//    ========================================================================== */
  
-// Base css
-@import "partials/typography";
- 
-// Page structure
-@import "partials/scaffolding";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/nav";
- 
-// Misc
-@import "partials/ie"; // IE specific css
-@import "partials/shame"; // Stylesheet reserved for temporary hacky code
+// @import "modules/mixins";
  
  
-/* Vendor css
-   ========================================================================== */
+// /* Partials
+//    ========================================================================== */
  
-@import "vendor/jquery.ui.core";
+// // Base css
+// @import "partials/typography";
+ 
+// // Page structure
+// @import "partials/scaffolding";
+// @import "partials/header";
+// @import "partials/footer";
+// @import "partials/nav";
+ 
+// // Misc
+// @import "partials/ie"; // IE specific css
+// @import "partials/shame"; // Stylesheet reserved for temporary hacky code
+ 
+ 
+// /* Vendor css
+//    ========================================================================== */
+ 
+// @import "vendor/jquery.ui.core";

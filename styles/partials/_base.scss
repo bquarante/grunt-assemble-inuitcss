@@ -1,0 +1,29 @@
+body {
+    //padding: 25px;
+}
+.demo-block{
+	background-color: #eee;
+}
+.wrapper {
+    max-width: 1200px;
+    margin:0 auto;
+    padding: $base-line-height $base-line-height 0px $base-line-height;
+}
+.step1 p {
+	background-color: green
+}
+.step2 p {
+	background-color: yellow;
+}
+.step3 p {
+	background-color: red;
+}
+$lap-start:         481px!default;
+$desk-start:        768px!default;
+$desk-wide-start:   1140px!default;
+
+.grid {
+    font-size: 0;
+    > * {font-size: $base-font-size;}
+    .grid {font-size: 0;}
+}

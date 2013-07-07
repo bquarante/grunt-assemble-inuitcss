@@ -1,0 +1,63 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'grunt-regarde' ]
+2 info using npm@1.3.1
+3 info using node@v0.10.12
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'grunt-regarde', null ]
+7 verbose cache add name=undefined spec="grunt-regarde" args=["grunt-regarde",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'grunt-regarde',
+8 verbose parsed url   path: 'grunt-regarde',
+8 verbose parsed url   href: 'grunt-regarde' }
+9 silly lockFile 63db3c37-grunt-regarde grunt-regarde
+10 verbose lock grunt-regarde /home/b40/.npm/63db3c37-grunt-regarde.lock
+11 silly lockFile 63db3c37-grunt-regarde grunt-regarde
+12 silly lockFile 63db3c37-grunt-regarde grunt-regarde
+13 verbose addNamed [ 'grunt-regarde', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 87eb9f14-grunt-regarde grunt-regarde@
+16 verbose lock grunt-regarde@ /home/b40/.npm/87eb9f14-grunt-regarde.lock
+17 silly addNameRange { name: 'grunt-regarde', range: '*', hasData: false }
+18 verbose url raw grunt-regarde
+19 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-regarde' ]
+20 verbose url resolved https://registry.npmjs.org/grunt-regarde
+21 info trying registry request attempt 1 at 22:49:48
+22 http GET https://registry.npmjs.org/grunt-regarde
+23 info retry will retry, error on last attempt: Error: connect ECONNREFUSED
+24 info trying registry request attempt 2 at 22:49:58
+25 http GET https://registry.npmjs.org/grunt-regarde
+26 info retry will retry, error on last attempt: Error: connect ECONNREFUSED
+27 info trying registry request attempt 3 at 22:50:59
+28 http GET https://registry.npmjs.org/grunt-regarde
+29 silly lockFile 87eb9f14-grunt-regarde grunt-regarde@
+30 silly lockFile 87eb9f14-grunt-regarde grunt-regarde@
+31 error Error: connect ECONNREFUSED
+31 error     at errnoException (net.js:901:11)
+31 error     at Object.afterConnect [as oncomplete] (net.js:892:19)
+31 error  { [Error: connect ECONNREFUSED]
+31 error   code: 'ECONNREFUSED',
+31 error   errno: 'ECONNREFUSED',
+31 error   syscall: 'connect' }
+32 error If you are behind a proxy, please make sure that the
+32 error 'proxy' config is set properly.  See: 'npm help config'
+33 error System Linux 3.8.0-25-generic
+34 error command "node" "/usr/local/bin/npm" "install" "grunt-regarde"
+35 error cwd /home/b40/Documents/Websites/test-grunt-assemble-inuitcss
+36 error node -v v0.10.12
+37 error npm -v 1.3.1
+38 error syscall connect
+39 error code ECONNREFUSED
+40 error errno ECONNREFUSED
+41 error stack Error: connect ECONNREFUSED
+41 error stack     at errnoException (net.js:901:11)
+41 error stack     at Object.afterConnect [as oncomplete] (net.js:892:19)
+42 verbose exit [ 1, true ]
