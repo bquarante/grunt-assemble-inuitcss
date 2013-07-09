@@ -52,7 +52,8 @@ module.exports = function (grunt) {
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ],
-                tasks: ['assemble', 'livereload']
+                // tasks: ['assemble', 'livereload']
+                //tasks: ['assemble']
             }
         },
         connect: {
@@ -257,14 +258,14 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        grunticon: {
-            myIcons: {
-                options: {
-                    src: '<%= yeoman.app %>/images/svg-src/',
-                    dest: '<%= yeoman.app %>/images/svg-dist/'
-                }
-            }
-        },
+        // grunticon: {
+        //     myIcons: {
+        //         options: {
+        //             src: '<%= yeoman.app %>/images/svg-src/',
+        //             dest: '<%= yeoman.app %>/images/svg-dist/'
+        //         }
+        //     }
+        // },
         cssmin: {
             // This task is pre-configured if you do not wish to use Usemin
             // blocks for your CSS. By default, the Usemin block from your
