@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ],
+                ]
                 // tasks: ['assemble', 'livereload']
                 //tasks: ['assemble']
             }
@@ -248,16 +248,16 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        svgmin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images/svg-src/',
-                    src: '{,*/}*.svg',
-                    dest: '<%= yeoman.dist %>/images/svg-src/'
-                }]
-            }
-        },
+        // svgmin: {
+        //     dist: {
+        //         files: [{
+        //             expand: true,
+        //             cwd: '<%= yeoman.app %>/images/svg-src/',
+        //             src: '{,*/}*.svg',
+        //             dest: '<%= yeoman.dist %>/images/svg-src/'
+        //         }]
+        //     }
+        // },
         // grunticon: {
         //     myIcons: {
         //         options: {
@@ -340,7 +340,7 @@ module.exports = function (grunt) {
                 'coffee',
                 'compass',
                 'imagemin',
-                'svgmin',
+                //'svgmin',
                 'htmlmin'
             ]
         },

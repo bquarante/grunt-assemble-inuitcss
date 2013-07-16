@@ -5,7 +5,8 @@
     "requirejs": "~2.1.4",
     "modernizr": "~2.6.2",
     "jquery": "~1.9.1",
-    "inuit.css"
+    "tweenMax": "~1.10.1",
+    "inuit.css": "~5.0.0"
   },
   "devDependencies": {}
 }
