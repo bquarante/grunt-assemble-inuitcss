@@ -7,7 +7,7 @@ body {
 .wrapper {
     max-width: 1200px;
     margin:0 auto;
-    padding: $base-line-height $base-line-height 0px $base-line-height;
+    padding: $base-line-height $base-line-height*4 0px $base-line-height*4;
 }
 .step1 p {
 	background-color: green
@@ -31,6 +31,6 @@ $desk-wide-start:   1140px!default;
     border: 10px solid black;
 }
 .grid__item{
-    padding: 0 0 $base-line-height 0;
+    padding: 0 0 $base-line-height/2 0;
     transition: all .3s ease-out;
 }
