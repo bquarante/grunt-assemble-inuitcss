@@ -27,3 +27,10 @@ $desk-wide-start:   1140px!default;
     > * {font-size: $base-font-size;}
     .grid {font-size: 0;}
 }
+.intro {
+    border: 10px solid black;
+}
+.grid__item{
+    padding: 0 0 $base-line-height 0;
+    transition: all .3s ease-out;
+}

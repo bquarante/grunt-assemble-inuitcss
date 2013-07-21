@@ -51,9 +51,9 @@ module.exports = function (grunt) {
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
+                ],
                 // tasks: ['assemble', 'livereload']
-                //tasks: ['assemble']
+                tasks: ['assemble']
             }
         },
         connect: {
