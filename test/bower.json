@@ -2,9 +2,8 @@
   "name": "test3",
   "private": true,
   "dependencies": {
-    "jquery": "~1.9",
-    "modernizr": "~2.7.1",
-    "inuit.css": "~5.0.0"
+    "chai": "~1.8.0",
+    "mocha": "~1.14.0"
   },
   "devDependencies": {}
 }

@@ -20,14 +20,15 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
+
 $use-grids:         true;
-$use-flexbox:       true;
+$use-flexbox:       false;
 $use-columns:       true;
-$use-nav:           true;
-$use-options:       true;
+$use-nav:           false;
+$use-options:       false;
 $use-pagination:    false;
 $use-breadcrumb:    false;
-$use-media:         false;
+$use-media:         true;
 $use-marginalia:    false;
 $use-island:        false;
 $use-block-list:    false;
@@ -44,7 +45,6 @@ $use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
 $use-greybox:       false;
-
 
 
 
@@ -69,31 +69,6 @@ $debug-mode:        false;
  * paulirish.com/2012/box-sizing-border-box-ftw ?
  */
 $global-border-box: true!default;
-
-
-
-
- 
-/*------------------------------------*\
-    $BASE
-\*------------------------------------*/
-/**
- * Base stuff
- */
-$base-font-size:    16px!default;
-$base-line-height:  20px!default;
-
-/**
- * Base font-family.
- */
-$base-font-family:  sans-serif!default;
-
-/**
- * Default colour for objects’ borders etc.
- */
-$base-ui-color:     #ccc!default;
-
-
 
 
 
@@ -142,7 +117,9 @@ $responsive-extra:  true; //!default;
 // $desk-start:        1024px!default;
 // $desk-wide-start:   1200px!default;
 
-
+$lap-start:         481px!default;
+$desk-start:        728px!default;
+$desk-wide-start:   1280px!default;
 
 
 
@@ -223,7 +200,7 @@ $responsive-extra:  true; //!default;
 //  *
 //  * Assign our `$base-line-height` to a new spacing var for more transparency.
 //  */
-$base-spacing-unit: $base-line-height / 2!default;
+// $base-spacing-unit: $base-line-height!default;
 // $half-spacing-unit: $base-spacing-unit / 2!default;
 // $line-height-ratio: $base-line-height / $base-font-size;
 

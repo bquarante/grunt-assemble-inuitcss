@@ -1,36 +1,205 @@
+ // des que je deplace les mixins dans un fichier externe, elles ne fonctionne plus.
+@mixin vendor($property, $value...){ 
+	#{-webkit-}#{$property}:$value;
+	   #{-moz-}#{$property}:$value;
+		#{-ms-}#{$property}:$value;
+		 #{-o-}#{$property}:$value;
+				 $property:$value;
+}
+/*------------------------------------*\
+		$BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+$base-font-size:    14px!default;
+$base-line-height:  30px!default;
+
+/**
+ * Base font-family.
+ */
+$base-font-family:  sans-serif!default;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:     #fff!default;
+$base-highlight-color: #bf9d5b!default;
+
 body {
-    //padding: 25px;
+	background-color: #000;
+	color: $base-ui-color;
+	//padding: $base-line-height $base-line-height 0px $base-line-height;
 }
-.demo-block{
-	background-color: #eee;
-}
-.wrapper {
-    max-width: 1200px;
-    margin:0 auto;
-    padding: $base-line-height $base-line-height*4 0px $base-line-height*4;
-}
-.step1 p {
-	background-color: green
-}
-.step2 p {
-	background-color: yellow;
-}
-.step3 p {
-	background-color: red;
-}
-$lap-start:         481px!default;
-$desk-start:        768px!default;
-$desk-wide-start:   1140px!default;
+
+/*-----------------------------------
+	WIDTHS / STRUCTURE
+-----------------------------------*/
+
+
 
 .grid {
-    font-size: 0;
-    > * {font-size: $base-font-size;}
-    .grid {font-size: 0;}
+		font-size: 0;
+		> * {font-size: $base-font-size;}
+		.grid {font-size: 0;}
 }
-.intro {
-    border: 10px solid black;
+
+.wrapper {
+		max-width: 1080px;
+		margin:0 auto;
+		padding: $base-line-height $base-line-height 0px $base-line-height;
 }
-.grid__item{
-    padding: 0 0 $base-line-height/2 0;
-    transition: all .3s ease-out;
+
+/*-----------------------------------
+	FONTS
+-----------------------------------*/
+
+a{
+	color: $base-ui-color;
+	text-decoration: none;
+}
+a:hover{
+	color: $base-highlight-color;
+	text-decoration: underline;
+}
+
+h2, h3, h4{
+		color: $base-highlight-color;
+}
+h4{
+	@extend .push-half--bottom;
+}
+.color-default{
+		color: $base-ui-color;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+}
+.table__group{
+	@extend .grid__item;
+	@extend .one-half;
+	@extend .lap-one-whole;
+	@extend .palm-one-whole;
+	display: block;
+	float: left;
+	li > ul > li, li > ul{clear: both; display: block;}
+	>li {
+		@extend .push--bottom;
+		@extend .soft--bottom;
+	}
+
+	li > ul > li:last-child {
+		@extend .push--bottom;
+	} 
+}
+.table__group--title{
+	//@extend .color-default;
+	@extend .soft-half--bottom;
+}
+.table--title, .table--value{
+	display: block;
+	float: left;
+	@extend .soft-half--bottom;
+}
+.table--title h4, .table--value h4{
+	display: block;
+	float: left;
+	@extend .soft-half--bottom;
+}
+
+.table--title {
+	width: 65%;
+	//
+}
+.table--value{
+	width:35%;
+	text-align: right;
+	font-size: 80%;
+}
+/* BACKGROUNDS */
+
+.about{
+		background: #000 url('../images/bg_about.jpg') no-repeat top center;
+}
+.collaboration{
+		background: #000 url('../images/bg_collaboration.jpg') no-repeat top center;
+}
+.public-space{
+		background: #000 url('../images/bg_public-space.jpg') no-repeat top center;
+}
+.service{
+		background: #000 url('../images/bg_service.jpg') no-repeat top center;
+}
+
+/* SLIDESHOW */
+
+ .rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  max-width: 780px;
+  //width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  @extend .soft--left;
+  //left: 0;
+  //top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  //float: left;
+  }
+
+.rslides img {
+  display: block;
+  //height: auto;
+  //float: left;
+  max-width: 100%;
+
+  border: 0;
+  }
+
+.thumbs{
+	text-transform: uppercase;
+	.rslides_here img{
+		opacity: 1;
+	}
+	img {
+		opacity: 0.5;
+		@include vendor(transition , 1s);
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+/*----------RESPONSIVE----------*/
+
+/* REMOVE EXTRA GUTTERS */
+@include media-query(lap){
+    .soft--right{
+    	padding-right: 0 !important;
+    }
+}
+@include media-query(palm){
+    .soft--right{
+    	padding-right: 0 !important;
+    }
+    .table--title{
+		width: 60%;
+    }
+
+    .table--value{
+		width: 40%;
+    }
 }

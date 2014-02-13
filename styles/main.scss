@@ -12,11 +12,11 @@
  
 /* Setup inuit.css
    ========================================================================== */
- 
+
 @import "modules/vars";
-@import "partials/base";
-@import "../bower_components/inuit.css/css/inuit.css/inuit";
- 
+@import "../bower_components/inuit.css/inuit";
+
+
  
 // /* Compass
 //    ========================================================================== */
@@ -28,13 +28,15 @@
 // /* Modules
 //    ========================================================================== */
  
-// @import "modules/mixins";
+// @import "modules/mixins"; /* inuit mixins fails !!! find the bug asap */
  
  
 // /* Partials
 //    ========================================================================== */
  
 // // Base css
+@import "partials/base";
+
 // @import "partials/typography";
  
 // // Page structure
@@ -52,3 +54,4 @@
 //    ========================================================================== */
  
 // @import "vendor/jquery.ui.core";
+
