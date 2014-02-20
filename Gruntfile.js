@@ -212,7 +212,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= yeoman.dist %>'
             },
-            html: '<%= yeoman.app %>/index.html'
+            html: '<%= yeoman.app %>/index.html' //{,*/}*.html
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
@@ -279,18 +279,18 @@ module.exports = function (grunt) {
         //         }
         //     }
         // },
-        // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/scripts/scripts.js': [
-        //                 '<%= yeoman.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
-        // concat: {
-        //     dist: {}
-        // },
+        //uglify: {
+        //    dist: {
+        //        files: {
+        //            '<%= yeoman.dist %>/scripts/scripts.js': [
+        //                '<%= yeoman.dist %>/scripts/scripts.js'
+        //            ]
+        //        }
+        //    }
+        //},
+        //concat: {
+        //    dist: {}
+        //},
 
         // Copies remaining files to places other tasks can use
         copy: {

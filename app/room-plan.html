@@ -18,6 +18,7 @@
 		<meta property="og:description" content="The Westminster Roppongi, proposed by Grosvenor. 7-minute walk to Azabu-Juban Sta. 8-minute walk to Roppongi Sta. 10-minute walk to Roppongi Sta.">
 		<meta property="og:author" content="artless Inc.">
 		<link rel="canonical" href="http://www.tw-r.jp">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<!-- build:js scripts/vendor.js -->
 		<!-- bower:js -->
 		<script src="bower_components/modernizr/modernizr.js"></script>
@@ -26,12 +27,10 @@
 
 		<!-- build:css(.tmp) styles/main.css -->
 		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="bower_components/custombox/src/jquery.custombox.css">
 		<!-- endbuild -->
-		
 	</head>
-	<body class="public-space">
-
-		<div id="background">
+	<body class="room-plan">
 			<div class="nav-mobile">&#9776;</div>
 			<nav role="navigation">
 				<ul id="nav">
@@ -48,40 +47,33 @@
 					<li><img src="images/navsub-request.png" alt="REQUEST"></li>
 				</ul>
 			</nav>
+			<div id="modal1" style="display: none;" class="modal-example-content">
+				<div class="modal-example-header">
+					<button type="button" class="close" onclick="$.fn.custombox('close');">&times;</button>
+				</div>
+				<div class="modal-example-body"> 
+					<img src="images/room-plan-406.jpg" alt="">
+				</div>
+			</div>
+
+			<div id="modal2" style="display: none;" class="modal-example-content">
+				<div class="modal-example-header">
+					<button type="button" class="close" onclick="$.fn.custombox('close');">&times;</button>
+				</div>
+				<div class="modal-example-body"> 
+					<img src="images/room-plan-605.jpg" alt="">
+				</div>
+			</div>
+
 			<div id="wrapper">
 				<div class="grid">
 					<div class="grid__item one-whole">
 						<img class="img--center" src="images/logo.png" alt="The Westminster" width="190" height="140">
 					</div>
-				</div>
-				<div class="grid text--center push--ends">
-					<div class="grid__item two-thirds push--top">
-						<h2>最上の時間が、このエントランスから始まる。</h2>
-						<p>住まう人を、静かに、格調高く迎える「ザ・ウエストミンスター六本木」のエントランス。スレートタイルの黒いウォールと木目が美しいルーバーが並び、外から内への連続性をつくっている。ロビーからは、明るく輝く緑。ドラマチックな深い陰影をもった空間は、ここから始まるプライベートな時間への期待を高めてくれる。</p>
-					</div>
-					<div class="grid__item one-whole text--center">
-						<div class="device">
-							<a class="arrow-left " href="#"></a> 
-							<a class="arrow-right " href="#"></a>
-							<div class="swiper-container eleven-twelfths">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="images/public-space1.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space2.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space3.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space4.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space5.jpg">
-									</div>
-								</div>
-							</div>
+					<div class="grid__item one-whole text--center" style="line-height:250px;">
+						<div class="modal-links">
+							<a href="#modal1" id="example1">Room 406 / 3LDK</a>
+							<a href="#modal2" id="example2">Room 605 / 2LDK</a>
 						</div>
 					</div>
 				</div>
@@ -94,7 +86,6 @@
 					<li><img src="images/footer-copyright.png" alt="COPYRIGHT GROSVENOR ALL RIGHTS RESERVED"></li>
 				</ul>
 			</footer>
-		</div>
 		<!-- build:js scripts/scripts.js -->
 		<!-- bower:js -->
 		<script src="bower_components/jquery/jquery.js"></script>
@@ -108,23 +99,28 @@
 		<script src="bower_components/greensock/src/minified/easing/EasePack.min.js"></script>
 		<script src="bower_components/greensock/src/minified/TweenLite.min.js"></script>
 		<script src="scripts/navigation.js"></script>
+
+		<script src="bower_components/custombox/src/jquery.custombox.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
+		
 		<script>
-			var mySwiper = new Swiper('.swiper-container',{
-				loop:true,
-				grabCursor: true,
-				paginationClickable: true,
-				calculateHeight: true
-			})
-			$('.arrow-left').on('click', function(e){
+			$('#example1').on('click', function (e) {
+				$.fn.custombox( this, {
+					overlayOpacity: 0,
+					effect: 'fadein',
+					responsive: true
+				});
 				e.preventDefault();
-				mySwiper.swipePrev();
-			})
-			$('.arrow-right').on('click', function(e){
+			});
+			$('#example2').on('click', function (e) {
+				$.fn.custombox( this, {
+					overlayOpacity: 0,
+					effect: 'fadein',
+					responsive: true
+				});
 				e.preventDefault();
-				mySwiper.swipeNext();
-			})
+			});
 		</script>
 	</body>
 </html>

@@ -27,10 +27,9 @@
 		<!-- build:css(.tmp) styles/main.css -->
 		<link rel="stylesheet" href="styles/main.css">
 		<!-- endbuild -->
-		
-	</head>
-	<body class="public-space">
 
+	</head>
+	<body class="contact">
 		<div id="background">
 			<div class="nav-mobile">&#9776;</div>
 			<nav role="navigation">
@@ -54,35 +53,26 @@
 						<img class="img--center" src="images/logo.png" alt="The Westminster" width="190" height="140">
 					</div>
 				</div>
-				<div class="grid text--center push--ends">
-					<div class="grid__item two-thirds push--top">
-						<h2>最上の時間が、このエントランスから始まる。</h2>
-						<p>住まう人を、静かに、格調高く迎える「ザ・ウエストミンスター六本木」のエントランス。スレートタイルの黒いウォールと木目が美しいルーバーが並び、外から内への連続性をつくっている。ロビーからは、明るく輝く緑。ドラマチックな深い陰影をもった空間は、ここから始まるプライベートな時間への期待を高めてくれる。</p>
-					</div>
-					<div class="grid__item one-whole text--center">
-						<div class="device">
-							<a class="arrow-left " href="#"></a> 
-							<a class="arrow-right " href="#"></a>
-							<div class="swiper-container eleven-twelfths">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="images/public-space1.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space2.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space3.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space4.jpg">
-									</div>
-									<div class="swiper-slide"> 
-										<img src="images/public-space5.jpg">
-									</div>
-								</div>
+				<div class="grid text--center soft--top push--top">
+					<div class="grid__item five-twelfths lap-one-whole palm-one-whole">
+						<div class="grid">
+							<div class="grid__item one-half lap-one-whole palm-one-whole contact-image">
+								<img src="images/contact-grosvenor.png" width="148" height="57" alt="Grosvenor">
+							</div>
+							<div class="grid__item one-half lap-one-whole palm-one-whole contact-title">
+								<span>三井不動産リアルティ株式会社</span>
 							</div>
 						</div>
+					</div>
+					<div class="grid__item one-whole">
+						<h2 class="color-default weight--normal push-half--ends">tel : 0120-911-022</h2>
+					</div>
+				
+					<div class="grid__item one-whole text--center">
+						<span style="display:inline-block">
+							<div class="contact-half">営業時間 / 10:00~18:00</div>
+							<div class="contact-half">定休日 / 水曜日</div>
+						</span>
 					</div>
 				</div>
 			</div>
@@ -110,21 +100,5 @@
 		<script src="scripts/navigation.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
-		<script>
-			var mySwiper = new Swiper('.swiper-container',{
-				loop:true,
-				grabCursor: true,
-				paginationClickable: true,
-				calculateHeight: true
-			})
-			$('.arrow-left').on('click', function(e){
-				e.preventDefault();
-				mySwiper.swipePrev();
-			})
-			$('.arrow-right').on('click', function(e){
-				e.preventDefault();
-				mySwiper.swipeNext();
-			})
-		</script>
 	</body>
 </html>

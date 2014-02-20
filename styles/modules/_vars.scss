@@ -24,7 +24,7 @@
 $use-grids:         true;
 $use-flexbox:       false;
 $use-columns:       true;
-$use-nav:           false;
+$use-nav:           true;
 $use-options:       false;
 $use-pagination:    false;
 $use-breadcrumb:    false;
@@ -84,7 +84,7 @@ $responsive:        true; //!default;
  * Responsiveness for widescreen/high resolution desktop monitors and beyond?
  * Note: `$responsive` variable above must be set to true before enabling this.
  */
-$responsive-extra:  true; //!default;
+$responsive-extra:  false; //!default;
 
 // /**
 //  * Responsive push and pull produce a LOT of code, only turn them on if you
@@ -118,8 +118,8 @@ $responsive-extra:  true; //!default;
 // $desk-wide-start:   1200px!default;
 
 $lap-start:         481px!default;
-$desk-start:        728px!default;
-$desk-wide-start:   1280px!default;
+$desk-start:        900px!default;
+//$desk-wide-start:   1280px!default;
 
 
 
@@ -204,3 +204,21 @@ $desk-wide-start:   1280px!default;
 // $half-spacing-unit: $base-spacing-unit / 2!default;
 // $line-height-ratio: $base-line-height / $base-font-size;
 
+/*------------------------------------*\
+		$BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+$base-font-size:    12px;
+$base-line-height:  28px;
+/**
+ * Base font-family.
+ */
+$base-font-family:  Meiryo, sans-serif;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color: #fff;
+$base-highlight-color: #bf9d5b;
